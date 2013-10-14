@@ -1,0 +1,27 @@
+  /*!
+ * Over-riding Bootstrap default values.
+ */
+
+body {
+  background-color: #BEECEC;
+}
+
+.container {
+  background-color: #ffffff;
+}
+
+.container2 {
+  width: 1140px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer{
+  background-color: #eeeeee;
+  height: 25px;
+}
+
+.push{
+  height: 40px;
+}

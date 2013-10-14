@@ -5,90 +5,128 @@
   <meta charset="utf-8">
   <title>ReadNihongo.com</title>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="nihongoreader.css">
 </head>
 
 <body>
-  <div class="container">
-    <h1>ReadNihongo.com</h1>
+  <div class="container2">
+    <div class="container">
+      <h1>ReadNihongo.com</h1>
 
-    <div class="row">
-      <div class="span3">
-        <ul class="nav nav-list">
-          <li class="nav-header">Links</li>
-          <li class="active"><a href="#">Search for Articles</a></li>
-          <li><a href="#">Kanji Setting</a></li>
-          <li><a href="#">User Settings</a></li>
-        </ul>
-      </div>
-      <div class="span9">
-        <form>
-          <fieldset>
-            <legend>Search Criteria for Articles</legend>
-            <div class="control-group">
-              <div class="row">
-                <p>Categories</p>
-                <div class="controls span3">
-                  <label class="checkbox">
-                    <input type="checkbox" value="sports" id="inlineCheckbox1">Sports
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" value="economy" id="inlineCheckbox1">Economy
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" value="technology" id="inlineCheckbox1">Technology
-                  </label>
-                </div>
-                <div class="controls span3">
-                  <label class="checkbox">
-                    <input type="checkbox" value="entertainment" id="inlineCheckbox1">Entertainment
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" value="politics" id="inlineCheckbox1">Politics
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" value="japan-domestic" id="inlineCheckbox1">Japan Domestic
-                  </label>
-                </div>
-                <div class="controls span3">
-                  <label class="checkbox">
-                    <input type="checkbox" value="worldnew" id="inlineCheckbox1">World News
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" value="science" id="inlineCheckbox1">Science
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox" value="music" id="inlineCheckbox1">Music
-                  </label>
+      <div class="row">
+        <div class="span3">
+          <ul class="nav nav-list">
+            <li class="nav-header">Navigation</li>
+            <li class="active"><a href="#">Search for Articles</a></li>
+            <li><a href="#">Kanji Settings</a></li>
+            <li><a href="#">User Settings</a></li>
+          </ul>
+        </div>
+
+        <div class="span9">
+          <form>
+            <fieldset="span9">
+              <legend>Search Criteria for Articles</legend>
+
+              <div class="row-fluid span12" id="Categories">
+                <div class="control-group">
+                  <p>Categories</p>
+                  <div class="controls span3">
+                    <label class="checkbox">
+                      <input type="checkbox" name="category[]" value="sports" id="inlineCheckbox1">Sports
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" value="economy" id="inlineCheckbox1">Economy
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" value="technology" id="inlineCheckbox1">Technology
+                    </label>
+                  </div>
+                  <div class="controls span3">
+                    <label class="checkbox">
+                      <input type="checkbox" value="entertainment" id="inlineCheckbox1">Entertainment
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" value="politics" id="inlineCheckbox1">Politics
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" value="japan-domestic" id="inlineCheckbox1">Japan Domestic
+                    </label>
+                  </div>
+                  <div class="controls span3">
+                    <label class="checkbox">
+                      <input type="checkbox" value="worldnew" id="inlineCheckbox1">World News
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" value="science" id="inlineCheckbox1">Science
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" value="music" id="inlineCheckbox1">Music
+                    </label>
+                  </div>
                 </div>
               </div>
-              <hr>
-              <div class="row">
-                <p>News Sources</p>
-                <div class="controls span3">
-                  <label class="checkbox">
-                    <input type="checkbox" value="yahoo" id="inlineCheckbox1">Yahoo
-                  </label>
-                </div>
-                <div class="controls span3">
-                  <label class="checkbox">
-                    <input type="checkbox" value="asahi" id="inlineCheckbox1">Asahi
-                  </label>
-                </div>
-                <div class="controls span3">
-                  <label class="checkbox">
-                    <input type="checkbox" value="nikkei" id="inlineCheckbox1">Nikkei Business
-                  </label>
+
+              <div class="row-fluid span12" id="News Source">  
+                <hr>
+                <div class="control-group">
+                  <p>News Sources</p>
+                  <div class="controls span3">
+                    <label class="checkbox">
+                      <input type="checkbox" value="yahoo" id="inlineCheckbox1">Yahoo
+                    </label>
+                  </div>
+                  <div class="controls span3">
+                    <label class="checkbox">
+                      <input type="checkbox" value="asahi" id="inlineCheckbox1">Asahi
+                    </label>
+                  </div>
+                  <div class="controls span3">
+                    <label class="checkbox">
+                      <input type="checkbox" value="nikkei" id="inlineCheckbox1">Nikkei Business
+                    </label>
+                  </div>
                 </div>
               </div>
-            </div>
-            <br>
-          </fieldset>
-        </form>
 
+              <div class="row-fluid span12" id="Date">
+                <hr>
+                <div class="control-group">
+                  <span>Include articles published in &nbsp;</span>
+                  <select>
+                    <option name="week">the last week.</option>
+                    <option name="month">the last month.</option>
+                    <option name="year">the last year.</option>
+                  </select>
+                </div>
+              </div>
 
+              <div class="row-fluid span12" id="Submit">
+                <br><br>
+                <div class="span4 offset6">
+                  <button type="submit" class="btn">Search</button>
+                </div>
+              </div>
 
+              <br>
+            </fieldset>
+          </form>
 
+        </div>
       </div>
+
+    </div>
+
+    <div class="push"></div>
+    
+    <div class="footer">
+        <div class="span2 offset1">
+            <p>&copy; 2013</p>
+        </div>
+        <div class="span2 offset7">
+            <a href="#">Contact</a>
+        </div>
+    </div>
 
   </div>
 
